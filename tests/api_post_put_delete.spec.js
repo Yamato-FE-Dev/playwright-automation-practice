@@ -3,6 +3,8 @@ const { test, expect } = require('@playwright/test')
 
 test('Tạo, sửa, xóa nhân viên', async({ request }) => {
     // 1.Gửi yêu cầu tạo
+    // Phần id(f6f7857c-ab5b-4f3c-85fc-7c799d776106) ở cuối là động theo từng máy, nếu bị lỗi thì vào https://webhook.site,
+    // và lấy id thay vào là được
     const linkApi = 'https://webhook.site/f6f7857c-ab5b-4f3c-85fc-7c799d776106'
     const responsePost = await request.post(linkApi, {
             data: {
