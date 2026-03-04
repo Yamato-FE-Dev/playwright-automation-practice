@@ -32,5 +32,5 @@ test('Người dùng có thể mua hàng thành công', async({ page }) => {
     // 8. KIỂM CHỨNG
     // Sau khi nhấn Finish, phải có dòng chữ "Thank you for your order!"
     const completeHeader = page.locator('.complete-header')
-    await expect(completeHeader).toHaveText('Thank you for your order?')
+    await expect(completeHeader).toHaveText('Thank you for your order!')
 });
